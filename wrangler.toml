@@ -1,0 +1,17 @@
+name = "toffee-proxy"
+type = "javascript"
+
+[env.production]
+route = "https://your-domain.com/*"
+zone_id = "your-zone-id"
+account_id = "your-account-id"
+workers_dev = false
+
+[build]
+command = "npm install && npm start"
+cwd = "."
+watch_dir = "."
+
+[[env.production.vars]]
+name = "NODE_ENV"
+value = "production"
